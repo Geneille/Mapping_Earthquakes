@@ -34,21 +34,22 @@ L.control.layers(baseMaps).addTo(map);
 let torontoHoods  = "https://raw.githubusercontent.com/Geneille/Mapping_Earthquakes/main/torontoNeighborhoods.json";
 
 // Create a style for the lines.
-let myStyle = {
-  color: "#ffffa1",
-  weight: 2
-}
+var mapStyle = {
+  color: "blue",
+  fillColor: "yellow",
+  fillOpacity: 0.5,
+  weight: 1
+};
 
 // Grabbing our GeoJSON data.
 d3.json(torontoHoods).then(function(data) {
     console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJSON(data, {
-  // style: myStyle,
-  // onEachFeature: function(feature, layer) {
-  // layer.bindPopup("<h2> Airline: " + feature.properties.airline + 
-  //       "</h2> <hr> <h3> Destination: " + feature.properties.dst + "</h3>");
-  // }
+  style: mapStyle,
+  onEachFeature: function(feature, layer) {
+  layer.bindPopup("<h3> Neighborhood: " + feature.properties.AREA_NAME + "</h3>");
+  }
 })
 .addTo(map);
 });
