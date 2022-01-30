@@ -35,8 +35,6 @@ let sanFranAirport =
 //     }
 // }).addTo(map);
 
-// "<h2>" + "Airport code: " + feature.properites.faa + "</h2> <hr> <h3> Airport name: " + feature.properites.name + "</h3>"
-
 // Grabbing our GeoJSON data using onEachFeature.
 L.geoJSON(sanFranAirport, {
     onEachFeature: function(feature, layer) {
@@ -56,6 +54,9 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/t
     maxZoom: 18,
     accessToken: API_KEY
 });
+
+// Accessing the airport GeoJSON URL
+let airportData = "https://raw.githubusercontent.com/Geneille/Mapping_Earthquakes/main/majorAirports.json";
 
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
