@@ -2,7 +2,7 @@
 
 ## Overview & Purpose
 
-The main objective of this project was to create an  interactive map using GeoJSON data. In general, the generated map comprise of three different map overlay, all recorded earthquake data over the past week, all the earthquakes with a magnitude greater than 4.5, and tectonic plates location on the earth. 
+The main objective of this project was to create an  interactive map using GeoJSON data. In general, the generated map comprise of three different map overlays, all recorded earthquake data over the 7 days, all the earthquakes with a magnitude greater than 4.5, and tectonic plates location on the earth. 
 
 ## Tools, Resources and Language
 
@@ -14,7 +14,7 @@ The main objective of this project was to create an  interactive map using GeoJS
 
 ## Analysis
 
-Code was written in Javascript (see challenge_logic.js) to create the required map, and script was written in HTML so the map can load and can be viewed on a webpage (see index.html). Necessary script files/links was rendered in the HTML file to ensure the map would populate as required and accurately. In general, the main steps used to produce the required map were:
+Code was written in Javascript (see challenge_logic.js) to create the required map, and script was written in HTML so the map can load and be viewed on a webpage (see index.html). Necessary script files/links was rendered in the HTML file to ensure the map would populate as required and accurately. In general, the main steps used to produce the required map were:
 
 1. Use mapbox tile layer to create the background of the map and create the map object with center, zoom level and default layer.
 2. Add control to the map that will allow the user to change visible layers.
@@ -25,14 +25,22 @@ Code was written in Javascript (see challenge_logic.js) to create the required m
 
 ## Results
 
-The main features of the created map with images is listed below
+The main features of the created map with images is listed below.
 
 1. A control feature that allows the user to change visible layers.
 
 2. Each earthquake was represented by a circle and color that matches certain features of the earthquake; the higher the magnitude of the earthquake the  larger diameter and darker the color (see Figure 1 below). 
 
-3. Each earthquake was enabled with a pop up feature that displays pertinent information relevant to the earthquake (the magnitude of the earthquake and its location), as shown in Figure 1 below.
+    Figure 1. Map with a street layer showing earthquakes.
+
+    <img width="652" alt="3" src="https://user-images.githubusercontent.com/92636438/152673043-4f116a33-e1d6-40eb-9bba-93731673cf90.png">
+
+
+3. Each earthquake was enabled with a pop up feature that displays pertinent information relevant to the earthquake, as shown in Figure 1 above.
 
 
 4. A clearly visbile tectonic plate layer as displayed in Figure 2 below.
 
+    Figure 2. Map with a dark overlay showing the Earth's tectonic plates.
+
+    <img width="514" alt="4" src="https://user-images.githubusercontent.com/92636438/152673083-472eba72-f915-4f2e-ae9a-962043fa50d6.png">
